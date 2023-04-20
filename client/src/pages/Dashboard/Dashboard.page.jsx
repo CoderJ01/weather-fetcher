@@ -4,6 +4,9 @@ import React from 'react';
 // CSS
 import './Dashboard.style.css';
 
+// components
+import Forecast from '../../Forecast/Forecast.component';
+
 const Dashboard = () => {
     return (
         <>
@@ -16,6 +19,7 @@ const Dashboard = () => {
 
                 </div>
             </div>
+            <Forecast/>
             <div className='forecast'>
                 <div className='current'>
 
