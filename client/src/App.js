@@ -8,7 +8,7 @@ import './App.css';
 import Dashboard from './pages/Dashboard/Dashboard.page';
 
 // components
-import Header from './components/Header.component';
+import Header from './components/Header/Header.component';
 
 // other imports
 import axios from 'axios';
