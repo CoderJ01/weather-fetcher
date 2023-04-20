@@ -12,7 +12,7 @@ function App() {
 	useEffect(() => {
 		const fetchCurrentWeather = async () => {
 			try {
-				const response = await axios.request(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44&&units=imperial&lon=-94.04&exclude=hourly&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
+				const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${'miami'}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
 				console.log(response);
 			}
 			catch(error) {
