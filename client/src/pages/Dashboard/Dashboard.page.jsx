@@ -1,5 +1,5 @@
 // React 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // CSS
 import './Dashboard.style.css';
@@ -14,19 +14,34 @@ const Dashboard = () => {
     const [input, setInput] = useState('');
     const [weatherInfo, setWeatherInfo] = useState([]);
 
-    const handleSearchSubmit = () => {
-        const fetchCurrentWeather = async () => {
-            try {
-                const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                setWeatherInfo(response);
-                console.log(weatherInfo);
+    const city = 'Casper';
+
+    const handleSearchSubmit = useCallback(() => {
+        if(input !== '') {
+            const fetchCurrentWeather = async () => {
+                try {
+                    const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
+                    setWeatherInfo(response);
+                    console.log(response);
+                }
+                catch(error) {
+                    console.log(error);
+                }
             }
-            catch(error) {
-                console.log(error);
-            }
+            fetchCurrentWeather();
         }
-        fetchCurrentWeather();
+    }, [input])
+
+    const handlePopularSubmit = () => {
+        setInput(city);
     }
+
+    useEffect(() => {
+        if(input !== '') {
+            console.log(input);
+            handleSearchSubmit();
+        }
+    }, [input, handleSearchSubmit]);
 
     return (
         <>
@@ -37,7 +52,7 @@ const Dashboard = () => {
                     <button onClick={handleSearchSubmit}>Search</button>
                 </div>
                 <div className='search-popular'>
-
+                    <button onClick={handlePopularSubmit}>{city}</button>
                 </div>
             </div>
             <Forecast/>
