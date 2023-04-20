@@ -1,11 +1,26 @@
+header {
+    background-image: linear-gradient(to right, rgb(63, 162, 219), rgb(182, 135, 255));
+    color: white;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    text-align: center;
+}
+
 /* Desktop */
 @media screen and (min-width: 1280px) {
-
+    header {
+        font-size: 40px;
+        margin-left: 10%;
+        margin-top: 3vh;
+        width: 80%;
+    }
 }
 
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
-
+    header {
+        font-size: 3rem;
+    }
 }
 
 /* iPad Air */
@@ -15,7 +30,9 @@
 
 /* Samsung Galaxy S20 Ultra */
 @media screen and (max-width: 412px) {
-
+    header {
+        font-size: 2rem;
+    }
 }
 
 /* iPhone 6/7/8 */
