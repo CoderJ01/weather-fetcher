@@ -1,6 +1,9 @@
 // React 
 import React from 'react';
 
+// CSS
+import './Dashboard.style.css';
+
 const Dashboard = () => {
     return (
         <>
