@@ -15,6 +15,7 @@ import axios from 'axios';
 
 const Dashboard = () => {
     const [input, setInput] = useState('');
+    const [selection, setSelection] = useState('');
     const [weatherInfo, setWeatherInfo] = useState([]);
 
     const handleSearchSubmit = useCallback(() => {
@@ -33,11 +34,27 @@ const Dashboard = () => {
         }
     }, [input])
 
-    useEffect(() => {
-        if(input !== '') {
-            handleSearchSubmit();
+    const handlePopularSubmit = useCallback(() => {
+        if(selection !== '') {
+            const fetchCurrentWeather = async () => {
+                try {
+                    const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${selection}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
+                    setWeatherInfo(response);
+                    console.log(response);
+                }
+                catch(error) {
+                    console.log(error);
+                }
+            }
+            fetchCurrentWeather();
         }
-    }, [input, handleSearchSubmit]);
+    }, [selection])
+
+    useEffect(() => {
+        if(selection !== '') {
+            handlePopularSubmit();
+        }
+    }, [selection, handlePopularSubmit]);
 
     return (
         <>
@@ -51,7 +68,7 @@ const Dashboard = () => {
                 {
                     popularCites.map(city => {
                         return (
-                            <button onClick={() => {setInput(city)}}>{city}</button>
+                            <button onClick={() => {setSelection(city)}}>{city}</button>
                         );
                     })
                 }
