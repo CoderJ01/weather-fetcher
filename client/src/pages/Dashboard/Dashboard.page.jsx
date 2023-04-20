@@ -16,7 +16,6 @@ import axios from 'axios';
 const Dashboard = () => {
     const [input, setInput] = useState('');
     const [weatherInfo, setWeatherInfo] = useState([]);
-    const [city, setCity] = useState('');
 
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
@@ -36,7 +35,6 @@ const Dashboard = () => {
 
     useEffect(() => {
         if(input !== '') {
-            console.log(input);
             handleSearchSubmit();
         }
     }, [input, handleSearchSubmit]);
