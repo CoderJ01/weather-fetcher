@@ -7,6 +7,9 @@ import './App.css';
 // pages
 import Dashboard from './pages/Dashboard/Dashboard.page';
 
+// components
+import Header from './components/Header.component';
+
 // other imports
 import axios from 'axios';
 
@@ -27,6 +30,7 @@ function App() {
 
 	return (
 		<div className='App'>
+			<Header/>
 			<Dashboard/>
 		</div>
 	);
