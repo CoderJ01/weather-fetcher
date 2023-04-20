@@ -5,7 +5,7 @@ import React from 'react';
 import './Dashboard.style.css';
 
 // components
-import Forecast from '../../Forecast/Forecast.component';
+import Forecast from '../../components/Forecast/Forecast.component';
 
 const Dashboard = () => {
     return (
