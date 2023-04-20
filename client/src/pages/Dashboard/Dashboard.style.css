@@ -1,11 +1,44 @@
+.weather {
+    border: 1px solid white;
+}
+
+.search {
+    border: 1px solid white;
+}
+
+.forecast {
+    border: 1px solid white;
+}
+
 /* Desktop */
 @media screen and (min-width: 1280px) {
+    .weather {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5vh;
+        margin-left: 10%;
+        min-height: 70vh;
+        width: 80%;
+    }
 
+    .search {
+        width: 30%;
+    }
+
+    .forecast {
+        width: 65%;
+    }
 }
 
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
+    .weather {
+        margin-top: 3vh;
+    }
 
+    .forecast {
+        margin-top: 5vh;
+    }
 }
 
 /* iPad Air */
