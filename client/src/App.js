@@ -4,6 +4,9 @@ import { useEffect } from 'react';
 // CSS
 import './App.css';
 
+// pages
+import Dashboard from './pages/Dashboard/Dashboard.page';
+
 // other imports
 import axios from 'axios';
 
@@ -24,7 +27,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			
+			<Dashboard/>
 		</div>
 	);
 }
