@@ -12,10 +12,11 @@ const Dashboard = () => {
         <>
         <div className='weather'>
             <div className='search'>
-                <div className='input'>
-
+                <div className='search-input'>
+                    <input value={''}></input>
+                    <button>Search</button>
                 </div>
-                <div className='popular'>
+                <div className='search-popular'>
 
                 </div>
             </div>
