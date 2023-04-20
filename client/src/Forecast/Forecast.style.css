@@ -1,0 +1,32 @@
+.forecast {
+    border: 1px solid white;
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+    .forecast {
+        width: 65%;
+    }
+}
+
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+    .forecast {
+        margin-top: 5vh;
+    }
+}
+
+/* iPad Air */
+@media screen and (max-width: 820px) {
+
+}
+
+/* Samsung Galaxy S20 Ultra */
+@media screen and (max-width: 412px) {
+
+}
+
+/* iPhone 6/7/8 */
+@media screen and (max-width: 375px) {
+
+}

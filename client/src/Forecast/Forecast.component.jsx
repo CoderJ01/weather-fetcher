@@ -1,6 +1,9 @@
 // React 
 import React from 'react';
 
+// CSS 
+import './Forecast.style.css';
+
 const Forecast = () => {
     return (
         <div className='forecast'>
