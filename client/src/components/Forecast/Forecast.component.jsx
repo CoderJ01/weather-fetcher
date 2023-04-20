@@ -4,7 +4,7 @@ import React from 'react';
 // CSS 
 import './Forecast.style.css';
 
-const Forecast = () => {
+const Forecast = ({ weather }) => {
     return (
         <div className='forecast'>
             <div className='f-current'>

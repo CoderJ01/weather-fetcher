@@ -74,7 +74,7 @@ const Dashboard = () => {
                 }
                 </div>
             </div>
-            <Forecast/>
+            <Forecast weather={weatherInfo}/>
         </div>
         <div className='history'>
 
