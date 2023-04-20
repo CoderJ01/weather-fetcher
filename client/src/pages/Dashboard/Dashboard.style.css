@@ -6,10 +6,6 @@
     border: 1px solid white;
 }
 
-.forecast {
-    border: 1px solid white;
-}
-
 /* Desktop */
 @media screen and (min-width: 1280px) {
     .weather {
@@ -24,20 +20,12 @@
     .search {
         width: 30%;
     }
-
-    .forecast {
-        width: 65%;
-    }
 }
 
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
     .weather {
         margin-top: 3vh;
-    }
-
-    .forecast {
-        margin-top: 5vh;
     }
 }
 
