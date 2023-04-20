@@ -14,14 +14,12 @@
 .search-input input {
     background-color: white;
     border: 2px solid white;
-    border-radius: 10px;
     padding: 5px;
 }
 
 .search-input button {
     background-color: rgb(63, 162, 219);
     border: 2px solid rgb(63, 162, 219);
-    border-radius: 5px;
     margin-top: 2vh;
     padding: 5px;
 }
@@ -45,12 +43,38 @@
     .search {
         width: 30%;
     }
+
+    .search-input input {
+        border-radius: 10px;
+    }
+    
+    .search-input button {
+        border-radius: 5px;
+    }
 }
 
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
     .weather {
         margin-top: 3vh;
+    }
+
+    .search-input {
+        margin-left: 20%;
+        width: 60%;
+    }
+
+    .search-input input {
+        border-radius: 20px;
+    }
+    
+    .search-input button {
+        border-radius: 15px;
+    }
+
+    .search-input input,
+    .search-input button {
+        font-size: 2rem;
     }
 }
 
@@ -61,10 +85,21 @@
 
 /* Samsung Galaxy S20 Ultra */
 @media screen and (max-width: 412px) {
+    .search-input {
+        margin-left: 5%;
+        width: 90%;
+    }
 
+    .search-input input,
+    .search-input button {
+        font-size: 20px;
+    }
 }
 
 /* iPhone 6/7/8 */
 @media screen and (max-width: 375px) {
-
+    .search-input input,
+    .search-input button {
+        font-size: 15px;
+    }
 }
