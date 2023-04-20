@@ -4,6 +4,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 // CSS
 import './Dashboard.style.css';
 
+// utils
+import { popularCites } from './Dashboard.util';
+
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
 
@@ -13,8 +16,7 @@ import axios from 'axios';
 const Dashboard = () => {
     const [input, setInput] = useState('');
     const [weatherInfo, setWeatherInfo] = useState([]);
-
-    const city = 'Casper';
+    const [city, setCity] = useState('');
 
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
@@ -32,10 +34,6 @@ const Dashboard = () => {
         }
     }, [input])
 
-    const handlePopularSubmit = () => {
-        setInput(city);
-    }
-
     useEffect(() => {
         if(input !== '') {
             console.log(input);
@@ -52,7 +50,13 @@ const Dashboard = () => {
                     <button onClick={handleSearchSubmit}>Search</button>
                 </div>
                 <div className='search-popular'>
-                    <button onClick={handlePopularSubmit}>{city}</button>
+                {
+                    popularCites.map(city => {
+                        return (
+                            <button onClick={() => {setInput(city)}}>{city}</button>
+                        );
+                    })
+                }
                 </div>
             </div>
             <Forecast/>
