@@ -15,7 +15,7 @@ const PORT = 3001;
 
 connectDB();
 
-app.use(express.json);
+app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:3000'
 }));
