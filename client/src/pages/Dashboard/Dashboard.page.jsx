@@ -23,8 +23,8 @@ const Dashboard = () => {
             const fetchCurrentWeather = async () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    setWeatherInfo(response);
-                    console.log(response);
+                    setWeatherInfo(response.data);
+                    console.log(response.data);
                 }
                 catch(error) {
                     console.log(error);
@@ -39,8 +39,8 @@ const Dashboard = () => {
             const fetchCurrentWeather = async () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${selection}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    setWeatherInfo(response);
-                    console.log(response);
+                    setWeatherInfo(response.data);
+                    console.log(response.data);
                 }
                 catch(error) {
                     console.log(error);
