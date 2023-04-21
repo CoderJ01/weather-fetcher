@@ -40,16 +40,20 @@
     }
 
     .forecast p {
-        font-size: 20px;
+        font-size: 27px;
     }
 }
 
 /* Samsung Galaxy S20 Ultra */
 @media screen and (max-width: 412px) {
-
+    .forecast p {
+        font-size: 20px;
+    }
 }
 
 /* iPhone 6/7/8 */
 @media screen and (max-width: 375px) {
-
+    .forecast p {
+        font-size: 15px;
+    }
 }
