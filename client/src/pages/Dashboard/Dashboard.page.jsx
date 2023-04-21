@@ -27,7 +27,7 @@ const Dashboard = () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
                     setCity(response.data.name);
-                    setTemperature(response.data.main.temperature);
+                    setTemperature(response.data.main.temp);
                     setWindSpeed(response.data.wind.speed);
                     setHumidity(response.data.main.humidity);
                     console.log(response.data);
