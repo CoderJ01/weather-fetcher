@@ -1,7 +1,3 @@
-.weather {
-    border: 1px solid white;
-}
-
 .search-input,
 .search-popular {
     display: flex;
