@@ -17,22 +17,22 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                     <>
                     <h1>City</h1>
                     <br/>
-                    <p>Temp:</p>
+                    <p style={{ fontWeight: 'bold' }}>Temp:</p>
                     <br/>
-                    <p>Wind:</p>
+                    <p style={{ fontWeight: 'bold' }}>Wind:</p>
                     <br/>
-                    <p>Humidity:</p>
+                    <p style={{ fontWeight: 'bold' }}>Humidity:</p>
                     </>
                 ) : 
                 (
                     <>
                     <h1>{city}</h1>
                     <br/>
-                    <p>Temp: {((temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {((temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
                     <br/>
-                    <p>Wind: {wind} mph</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {wind} mph</p>
                     <br/>
-                    <p>Humidity: {humidity}%</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {humidity}%</p>
                     </>
                 )
             }
