@@ -4,7 +4,7 @@ import React from 'react';
 // CSS 
 import './Forecast.style.css';
 
-const Forecast = ({ city, temp, wind, humidity, fetched }) => {
+const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
     return (
         <div className='forecast'>
             <div className='f-current'>
@@ -36,10 +36,19 @@ const Forecast = ({ city, temp, wind, humidity, fetched }) => {
                 
             </div>
             <div className='f-future'>
-                <div className='ff-day'>
-
-                </div>
-                {/* next four days */}
+                <h2>5-day Forecast</h2>
+                {
+                    Array.apply(0, Array(5)).map(function(x, i) {
+                        return (
+                            <div className='ff-day'>
+                                <p>Date</p>
+                                <p>Temp: </p>
+                                <p>Wind: </p>
+                                <p>Humidity: </p>
+                            </div>
+                        );
+                    })
+                }
             </div>
             <div className='f-most-searched'>
 
