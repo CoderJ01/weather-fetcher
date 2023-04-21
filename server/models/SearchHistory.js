@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const SearchHistorySchema = new mongoose.Schema({
     searches: {
-        Type: [String]
+        type: [String]
     }
 });
 
