@@ -4,13 +4,15 @@ const express = require('express');
 // dotenv
 require('dotenv').config();
 
+// other Node.js packages
+const cors = require('cors');
+require('colors');
+
 // MongoDB
 const connectDB = require('./config/connection');
 
 // other imports
-const cors = require('cors');
 const routes = require('./routes/index');
-require('colors');
 
 const app = express();
 const PORT = 3001;
