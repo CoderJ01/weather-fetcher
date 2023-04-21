@@ -2,14 +2,6 @@
     border: 1px solid white;
 }
 
-.search {
-    border: 1px solid white;
-}
-
-.search-popular {
-    border: 1px solid white;
-}
-
 .search-input,
 .search-popular {
     display: flex;
