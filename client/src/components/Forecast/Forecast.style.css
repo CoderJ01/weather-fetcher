@@ -2,6 +2,12 @@
     border: 1px solid white;
 }
 
+.f-current,
+.f-current h1,
+.f-current p {
+    background-color: white;
+}
+
 /* Desktop */
 @media screen and (min-width: 1280px) {
     .forecast {
@@ -12,13 +18,30 @@
 /* iPad Pro */
 @media screen and (max-width: 1024px) {
     .forecast {
+        margin-left: 20%;
         margin-top: 5vh;
+        width: 60%;
+    }
+
+    .forecast h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .forecast p {
+        font-size: 2rem;
     }
 }
 
 /* iPad Air */
 @media screen and (max-width: 820px) {
+    .forecast h1 {
+        font-size: 2rem;
+    }
 
+    .forecast p {
+        font-size: 20px;
+    }
 }
 
 /* Samsung Galaxy S20 Ultra */
