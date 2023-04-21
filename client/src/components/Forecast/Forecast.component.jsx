@@ -39,16 +39,33 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                 <h2>5-day Forecast</h2>
                 <div className='ff-display'>
                 {
-                    Array.apply(0, Array(5)).map(function(x, i) {
-                        return (
-                            <div className='ffd-day'>
-                                <p>Date</p>
-                                <p>Temp: </p>
-                                <p>Wind: </p>
-                                <p>Humidity: </p>
-                            </div>
-                        );
-                    })
+                    daily.length === 0 ? 
+                    (
+                        Array.apply(0, Array(5)).map(function(x, i) {
+                            return (
+                                <div className='ffd-day'>
+                                    <p>Date</p>
+                                    <p>Temp: </p>
+                                    <p>Wind: </p>
+                                    <p>Humidity: </p>
+                                </div>
+                            );
+                        })
+                    ) : 
+                    (
+                        Array.apply(0, Array(5)).map(function(x, i) {
+                            console.log(x);
+                            console.log(i);
+                            return (
+                                <div className='ffd-day'>
+                                    <p>Date:</p>
+                                    <p>Temp: {daily[i + 1].temp.day}°F</p>
+                                    <p>Wind: {daily[i + 1].wind_speed} mph</p>
+                                    <p>Humidity: {daily[i + 1].humidity}%</p>
+                                </div>
+                            );
+                        })
+                    )
                 }
                 </div>
             </div>
