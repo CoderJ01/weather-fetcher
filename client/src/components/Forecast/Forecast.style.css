@@ -8,10 +8,39 @@
     background-color: white;
 }
 
+.f-future {
+    border: 1px solid white;
+    margin-top: 3vh;
+}
+
+.f-future h2 {
+    color: white;
+}
+
+.ffd-day {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 12px 28px 0px, rgba(255, 255, 255, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.ffd-day,
+.ffd-day p {
+    background-color: rgb(123, 149, 237);
+}
+
 /* Desktop */
 @media screen and (min-width: 1280px) {
     .forecast {
         width: 65%;
+    }
+
+    .ff-display {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3vh;
+    }
+
+    .ffd-day {
+        border-radius: 15px;
+        padding: 10px 20px 10px 10px;
     }
 }
 

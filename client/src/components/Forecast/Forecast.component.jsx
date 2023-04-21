@@ -37,10 +37,11 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
             </div>
             <div className='f-future'>
                 <h2>5-day Forecast</h2>
+                <div className='ff-display'>
                 {
                     Array.apply(0, Array(5)).map(function(x, i) {
                         return (
-                            <div className='ff-day'>
+                            <div className='ffd-day'>
                                 <p>Date</p>
                                 <p>Temp: </p>
                                 <p>Wind: </p>
@@ -49,6 +50,7 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                         );
                     })
                 }
+                </div>
             </div>
             <div className='f-most-searched'>
 
