@@ -6,7 +6,12 @@
     border: 1px solid white;
 }
 
-.search-input {
+.search-popular {
+    border: 1px solid white;
+}
+
+.search-input,
+.search-popular {
     display: flex;
     flex-direction: column;
 }
@@ -21,12 +26,28 @@
     background-color: rgb(63, 162, 219);
     border: 2px solid rgb(63, 162, 219);
     margin-top: 2vh;
-    padding: 5px;
 }
 
 .search-input button:active {
     background-color: rgb(182, 135, 255);
     border: 2px solid rgb(182, 135, 255);
+}
+
+.search-popular button {
+    background-color: white;
+    border: 2px solid white;
+    margin-top: 3vh;
+}
+
+.search-popular button:active {
+    background-image: linear-gradient(to right, rgb(63, 162, 219), rgb(182, 135, 255));
+    border-image: linear-gradient(to right, rgb(63, 162, 219), rgb(182, 135, 255));
+    border-width: 2px;
+}
+
+.search-input button,
+.search-popular button {
+    padding: 5px;
 }
 
 /* Desktop */
@@ -48,8 +69,13 @@
         border-radius: 10px;
     }
     
-    .search-input button {
+    .search-input button,
+    .search-popular button {
         border-radius: 5px;
+    }
+
+    .search-popular button {
+        margin-top: 3vh;
     }
 }
 
@@ -59,7 +85,7 @@
         margin-top: 3vh;
     }
 
-    .search-input {
+    .search {
         margin-left: 20%;
         width: 60%;
     }
@@ -85,7 +111,7 @@
 
 /* Samsung Galaxy S20 Ultra */
 @media screen and (max-width: 412px) {
-    .search-input {
+    .search {
         margin-left: 5%;
         width: 90%;
     }
