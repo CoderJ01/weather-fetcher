@@ -2,6 +2,10 @@
     border: 1px solid white;
 }
 
+.f-current {
+    padding-bottom: 3vh;
+}
+
 .f-current,
 .f-current h1,
 .f-current p {
