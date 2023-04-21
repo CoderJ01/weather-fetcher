@@ -33,13 +33,16 @@
 
     .ff-display {
         display: flex;
-        justify-content: space-between;
-        margin-top: 3vh;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 0vh;
     }
 
     .ffd-day {
         border-radius: 15px;
+        margin-top: 3vh;
         padding: 10px 20px 10px 10px;
+        width: 30%;
     }
 }
 
@@ -70,10 +73,10 @@
 
     .ffd-day {
         border-radius: 25px;
-        margin-left: 30%;
+        margin-left: 20%;
         margin-top: 5vh;
         padding: 1vh 1vw 1vh 1vw;
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -103,8 +106,8 @@
     }
 
     .ffd-day {
-        margin-left: 20%;
-        width: 60%;
+        margin-left: 10%;
+        width: 80%;
     }
 }
 
@@ -115,8 +118,6 @@
     }
 
     .ffd-day {
-        margin-left: 10%;
         padding: 2vh 1vw 2vh 1vw;
-        width: 80%;
     }
 }
