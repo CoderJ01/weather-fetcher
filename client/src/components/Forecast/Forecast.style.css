@@ -28,6 +28,10 @@
         width: 65%;
     }
 
+    .f-current {
+        border-radius: 20px;
+    }
+
     .ff-display {
         display: flex;
         flex-wrap: wrap;
@@ -49,6 +53,10 @@
         margin-left: 20%;
         margin-top: 5vh;
         width: 60%;
+    }
+
+    .f-current {
+        border-radius: 35px;
     }
 
     .forecast h1 {
