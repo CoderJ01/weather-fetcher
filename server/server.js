@@ -1,6 +1,9 @@
 // Express.js
 const express = require('express');
 
+// dotenv
+require('dotenv').config();
+
 // MongoDB
 const connectDB = require('./config/connection');
 
@@ -8,7 +11,6 @@ const connectDB = require('./config/connection');
 const cors = require('cors');
 const routes = require('./routes/index');
 require('colors');
-require('dotenv').config();
 
 const app = express();
 const PORT = 3001;
