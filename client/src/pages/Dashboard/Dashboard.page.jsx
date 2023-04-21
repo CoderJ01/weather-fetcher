@@ -20,6 +20,7 @@ const Dashboard = () => {
     const [temperature, setTemperature] = useState(0);
     const [windSpeed, setWindSpeed] = useState(0);
     const [humidity, setHumidity] = useState(0);
+    const [fethced, setFetched] = useState(false);
 
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
@@ -30,6 +31,7 @@ const Dashboard = () => {
                     setTemperature(response.data.main.temp);
                     setWindSpeed(response.data.wind.speed);
                     setHumidity(response.data.main.humidity);
+                    setFetched(true);
                     console.log(response.data);
                 }
                 catch(error) {
@@ -49,6 +51,7 @@ const Dashboard = () => {
                     setTemperature(response.data.main.temp);
                     setWindSpeed(response.data.wind.speed);
                     setHumidity(response.data.main.humidity);
+                    setFetched(true);
                     console.log(response.data);
                 }
                 catch(error) {
@@ -88,6 +91,7 @@ const Dashboard = () => {
                 temp={temperature}
                 wind={windSpeed}
                 humidity={humidity}
+                fetched={fethced}
             />
         </div>
         <div className='history'>
