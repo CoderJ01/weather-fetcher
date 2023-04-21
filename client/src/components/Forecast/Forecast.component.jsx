@@ -4,6 +4,9 @@ import React from 'react';
 // CSS 
 import './Forecast.style.css';
 
+// other imports
+import moment from 'moment';
+
 const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
     return (
         <div className='forecast'>
@@ -58,7 +61,7 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                             console.log(i);
                             return (
                                 <div className='ffd-day'>
-                                    <p>Date:</p>
+                                    <p>Date: {moment().add(i + 1,'day').format('L')}</p>
                                     <p>Temp: {daily[i + 1].temp.day}°F</p>
                                     <p>Wind: {daily[i + 1].wind_speed} mph</p>
                                     <p>Humidity: {daily[i + 1].humidity}%</p>
