@@ -1,3 +1,7 @@
+.weather {
+    padding-bottom: 5vh;
+}
+
 .search-input,
 .search-popular {
     display: flex;
