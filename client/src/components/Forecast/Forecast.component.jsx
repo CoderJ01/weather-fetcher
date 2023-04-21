@@ -47,10 +47,10 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                         Array.apply(0, Array(5)).map(function(x, i) {
                             return (
                                 <div className='ffd-day'>
-                                    <p>Date</p>
-                                    <p>Temp: </p>
-                                    <p>Wind: </p>
-                                    <p>Humidity: </p>
+                                    <p style={{ fontWeight: 'bold' }}>Date</p>
+                                    <p style={{ fontWeight: 'bold' }}>Temp: </p>
+                                    <p style={{ fontWeight: 'bold' }}>Wind: </p>
+                                    <p style={{ fontWeight: 'bold' }}>Humidity: </p>
                                 </div>
                             );
                         })
@@ -61,10 +61,10 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                             console.log(i);
                             return (
                                 <div className='ffd-day'>
-                                    <p>Date: {moment().add(i + 1,'day').format('L')}</p>
-                                    <p>Temp: {daily[i + 1].temp.day}°F</p>
-                                    <p>Wind: {daily[i + 1].wind_speed} mph</p>
-                                    <p>Humidity: {daily[i + 1].humidity}%</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Date:</span> {moment().add(i + 1,'day').format('L')}</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {daily[i + 1].temp.day}°F</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {daily[i + 1].wind_speed} mph</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {daily[i + 1].humidity}%</p>
                                 </div>
                             );
                         })
