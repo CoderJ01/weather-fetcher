@@ -21,10 +21,18 @@ const Dashboard = () => {
     const [windSpeed, setWindSpeed] = useState(0);
     const [humidity, setHumidity] = useState(0);
     const [fethced, setFetched] = useState(false);
-    const [daily, setDaily] = useState();
+    const [daily, setDaily] = useState([]);
 
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
+
+            for(let i = 0; i < popularCites.length; i++) {
+                if(input.toLowerCase() === popularCites[i].toLowerCase()) {
+                    alert(`Use button for ${popularCites[i]}`);
+                    return;
+                }
+            }
+
             const fetchCurrentWeather = async () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
