@@ -16,14 +16,20 @@ import axios from 'axios';
 const Dashboard = () => {
     const [input, setInput] = useState('');
     const [selection, setSelection] = useState('');
-    const [weatherInfo, setWeatherInfo] = useState([]);
+    const [city, setCity] = useState('');
+    const [temperature, setTemperature] = useState(0);
+    const [windSpeed, setWindSpeed] = useState(0);
+    const [humidity, setHumidity] = useState(0);
 
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
             const fetchCurrentWeather = async () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    setWeatherInfo(response.data);
+                    setCity(response.data.name);
+                    setTemperature(response.data.main.temperature);
+                    setWindSpeed(response.data.wind.speed);
+                    setHumidity(response.data.main.humidity);
                     console.log(response.data);
                 }
                 catch(error) {
@@ -39,7 +45,10 @@ const Dashboard = () => {
             const fetchCurrentWeather = async () => {
                 try {
                     const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${selection}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    setWeatherInfo(response.data);
+                    setCity(response.data.name);
+                    setTemperature(response.data.main.temperature);
+                    setWindSpeed(response.data.wind.speed);
+                    setHumidity(response.data.main.humidity);
                     console.log(response.data);
                 }
                 catch(error) {
@@ -74,7 +83,12 @@ const Dashboard = () => {
                 }
                 </div>
             </div>
-            <Forecast weather={weatherInfo}/>
+            <Forecast
+                city={city}
+                temp={temperature}
+                wind={windSpeed}
+                humidity={humidity}
+            />
         </div>
         <div className='history'>
 
