@@ -4,18 +4,17 @@ import React from 'react';
 // CSS 
 import './Forecast.style.css';
 
-const Forecast = ({ weather }) => {
-    console.log(weather);
+const Forecast = ({ city, temp, wind, humidity }) => {
     return (
         <div className='forecast'>
             <div className='f-current'>
-                <h1>{weather.name}</h1>
+                <h1>{city}</h1>
                 <br/>
-                <p>Temp: {((weather.main.temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
+                <p>Temp: {((temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
                 <br/>
-                <p>Wind: {weather.wind.speed} mph</p>
+                <p>Wind: {wind} mph</p>
                 <br/>
-                <p>Humidity: {weather.main.humidity}%</p>
+                <p>Humidity: {humidity}%</p>
             </div>
             <div className='f-future'>
                 <div className='ff-day'>
