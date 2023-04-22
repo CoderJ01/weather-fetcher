@@ -42,13 +42,6 @@ router.get('/', async (req, res) => {
         }
     }
 
-    let greatest = 0;
-    for(let i = 0; i < tally.length; i++) {
-        if(tally[i].numberOfSearches > greatest) {
-            greatest = tally[i].numberOfSearches;
-        }
-    }
-
     let orderedTally = bubbleSort(tally);
 
     res.send(orderedTally);
