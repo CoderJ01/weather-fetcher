@@ -46,7 +46,6 @@ router.get('/', async (req, res) => {
     for(let i = 0; i < tally.length; i++) {
         if(tally[i].numberOfSearches > greatest) {
             greatest = tally[i].numberOfSearches;
-            console.log(greatest)
         }
     }
 
