@@ -1,9 +1,13 @@
 const router = require('express').Router();
 const SearchHistory = require('../models/SearchHistory');
 
-router.get('/', async (req, res) => {
-    const searchHistory = await SearchHistory.find();
-    console.log('Testing');
+router.post('/', async (req, res) => {
+    const searchHistory = await SearchHistory.find({ _id: process.env.ID });
+    
+    if(req.body.input) {
+        searchHistory.searches.push(req.body.input);
+        searchHistory.save();
+    }
     res.send(searchHistory);
 });
 
