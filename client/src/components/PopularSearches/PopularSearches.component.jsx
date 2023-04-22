@@ -4,6 +4,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 // CSS
 import './PopularSearches.style.css';
 
+// util
+import { toTitleCase } from './PopularSearches.util';
+
 // URL
 import { baseURL } from '../../utils/urls';
 
@@ -44,7 +47,7 @@ const PopularSearches = () => {
                         topSearches.map((search, i) => {
                             if(i < 5) {
                                 return (
-                                    <p>{i + 1}. {search.city}</p>
+                                    <p>{i + 1}. {toTitleCase(search.city)}</p>
                                 );
                             }
                             else {
