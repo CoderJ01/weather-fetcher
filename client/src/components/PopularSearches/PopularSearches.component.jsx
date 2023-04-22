@@ -1,6 +1,9 @@
 // React
 import React from 'react';
 
+// CSS
+import './PopularSearches.style.css';
+
 const PopularSearches = () => {
     return (
         <div className='popular-searches'>
