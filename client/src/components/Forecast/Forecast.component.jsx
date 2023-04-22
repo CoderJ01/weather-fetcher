@@ -57,8 +57,6 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                     ) : 
                     (
                         Array.apply(0, Array(5)).map(function(x, i) {
-                            console.log(x);
-                            console.log(i);
                             return (
                                 <div className='ffd-day'>
                                     <p><span style={{ fontWeight: 'bold' }}>Date:</span> {moment().add(i + 1,'day').format('L')}</p>
