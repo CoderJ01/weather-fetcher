@@ -10,6 +10,7 @@ import { baseURL } from '../../utils/urls';
 
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
+import PopularSearches from '../../components/PopularSearches/PopularSearches.component';
 
 // other imports
 import axios from 'axios';
@@ -124,6 +125,7 @@ const Dashboard = () => {
                 daily={daily}
             />
         </div>
+        <PopularSearches/>
         </>
     );
 }
