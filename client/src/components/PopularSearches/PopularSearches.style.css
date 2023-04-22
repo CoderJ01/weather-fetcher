@@ -44,8 +44,8 @@
     }
 }
 
-/* Samsung Galaxy S20 Ultra */
-@media screen and (max-width: 412px) {
+/* iPhone XR */
+@media screen and (max-width: 414px) {
     .popular-searches {
         margin-left: 10%;
         padding: 2vh 0 2vh 4vw;

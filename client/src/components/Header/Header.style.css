@@ -24,8 +24,8 @@ header {
     }
 }
 
-/* Samsung Galaxy S20 Ultra */
-@media screen and (max-width: 412px) {
+/* iPhone Xr */
+@media screen and (max-width: 414px) {
     header {
         font-size: 2rem;
     }
