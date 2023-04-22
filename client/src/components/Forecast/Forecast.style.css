@@ -94,8 +94,8 @@
     }
 }
 
-/* Samsung Galaxy S20 Ultra */
-@media screen and (max-width: 412px) {
+/* iPhone XR */
+@media screen and (max-width: 414px) {
     .forecast p {
         font-size: 20px;
     }
