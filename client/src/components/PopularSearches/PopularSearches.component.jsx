@@ -15,8 +15,6 @@ import axios from 'axios';
 
 const PopularSearches = () => {
     const [topSearches, setTopSearches] = useState([]);
-    
-    console.log(topSearches);
 
     const fetchCities = useCallback(async () => {
         try {

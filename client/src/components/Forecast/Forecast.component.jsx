@@ -70,9 +70,6 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                 }
                 </div>
             </div>
-            <div className='f-most-searched'>
-
-            </div>
         </div>
     );
 }
