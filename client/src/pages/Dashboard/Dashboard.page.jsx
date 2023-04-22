@@ -48,7 +48,20 @@ const Dashboard = () => {
                 }
                 catch(error) {
                     console.log(error);
+                    return;
                 }
+         
+                axios.post('http://localhost:3001/search-history', 
+                    {
+                        input: input
+                    }
+                )
+                .then(response => {
+                    console.log(response)
+                })
+                .catch(error => {
+                    console.log(error);
+                })
             }
             fetchCurrentWeather();
         }
