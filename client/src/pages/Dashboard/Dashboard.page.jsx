@@ -6,6 +6,7 @@ import './Dashboard.style.css';
 
 // utils
 import { popularCites } from './Dashboard.util';
+import { baseURL } from '../../utils/urls';
 
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
@@ -51,7 +52,7 @@ const Dashboard = () => {
                     return;
                 }
          
-                axios.post('http://localhost:3001/search-history', 
+                axios.post(`${baseURL}/search-history`, 
                     {
                         input: input
                     }
