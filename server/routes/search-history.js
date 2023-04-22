@@ -11,6 +11,13 @@ router.post('/', async (req, res) => {
     res.send(searchHistory);
 });
 
+router.delete('/', async (req, res) => {
+    const searchHistory = await SearchHistory.findOne({ _id: process.env.ID });
+    searchHistory.searches = [];
+    searchHistory.save();
+    res.send(searchHistory);
+});
+
 module.exports = router;
 
 
