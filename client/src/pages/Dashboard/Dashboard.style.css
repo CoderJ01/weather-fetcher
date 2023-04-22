@@ -86,6 +86,10 @@
         border-radius: 20px;
     }
 
+    .search-input button {
+        border-radius: 15px;
+    }
+
     .search-popular {
         flex-direction: row;
         flex-wrap: wrap;
@@ -94,17 +98,10 @@
     } 
 
     .search-popular button {
+        border-radius: 25px;
         width: 45%;
     } 
     
-    .search-input button {
-        border-radius: 15px;
-    }
-
-    .search-popular button {
-        border-radius: 25px;
-    }
-
     .search-input input,
     .search-input button,
     .search-popular button {
