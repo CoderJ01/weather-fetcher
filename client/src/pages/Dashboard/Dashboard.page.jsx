@@ -124,9 +124,6 @@ const Dashboard = () => {
                 daily={daily}
             />
         </div>
-        <div className='history'>
-
-        </div>
         </>
     );
 }
