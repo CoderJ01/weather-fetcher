@@ -11,9 +11,9 @@ import { baseURL } from '../../utils/urls';
 import axios from 'axios';
 
 const PopularSearches = () => {
-    const [topSeaches, setTopSearches] = useState([]);
+    const [topSearches, setTopSearches] = useState([]);
     
-    console.log(topSeaches);
+    console.log(topSearches);
 
     const fetchCities = useCallback(async () => {
         try {
@@ -31,12 +31,31 @@ const PopularSearches = () => {
     }, [fetchCities]);
 
     return (
-        <div className='popular-searches'>
-            <h2>Top Searches</h2>
-            <p>1. City</p>
-            <p>2. City</p>
-            <p>3. City</p>
-        </div>
+        <>
+        {
+            topSearches.length === 0 ? 
+            (
+                ''
+            ) : 
+            (
+                <div className='popular-searches'>
+                    <h2>Top Searches</h2>
+                    {
+                        topSearches.map((search, i) => {
+                            if(i < 5) {
+                                return (
+                                    <p>{i + 1}. {search.city}</p>
+                                );
+                            }
+                            else {
+                                return<></>
+                            }
+                        })
+                    }
+                </div>
+            )
+        }
+        </>
     );
 }
 
