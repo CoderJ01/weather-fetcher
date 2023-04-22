@@ -1,8 +1,8 @@
-export const getOccurance = (array, value) => {
+const getOccurance = (array, value) => {
     return array.filter((v) => (v === value)).length;
 }
 
-export const bubbleSort = (array) => {
+const bubbleSort = (array) => {
     for(let i = 0; i < array.length; i++) {
         for(let j = 0; j < array.length - i - 1; j++) {
             if(array[j + 1].numberOfSearches > array[j].numberOfSearches) {
@@ -12,3 +12,5 @@ export const bubbleSort = (array) => {
     }
     return array;
 }
+
+module.exports = { getOccurance, bubbleSort };
