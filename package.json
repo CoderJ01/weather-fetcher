@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CoderJ01/weather-fetcher/issues"
   },
-  "homepage": "https://github.com/CoderJ01/weather-fetcher#readme"
+  "homepage": "https://github.com/CoderJ01/weather-fetcher#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
 }
