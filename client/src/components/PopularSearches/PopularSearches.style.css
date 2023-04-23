@@ -3,6 +3,10 @@
     box-shadow: rgb(182, 135, 255) 6px 6px 12px 0px inset, rgb(182, 135, 255) -6px -6px 12px 2px inset;
 }
 
+.popular-searches h2 {
+    text-align: center;
+}
+
 .popular-searches p {
     margin-top: 1vh;
 }
