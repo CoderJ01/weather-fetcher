@@ -34,8 +34,8 @@
 }
 
 .search-popular button:active {
-    background-image: linear-gradient(to right, rgb(63, 162, 219), rgb(182, 135, 255));
-    border-image: linear-gradient(to right, rgb(63, 162, 219), rgb(182, 135, 255));
+    background-image: linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255));
+    border-image: linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255));
     border-width: 2px;
 }
 
