@@ -9,6 +9,7 @@
 
 .f-future h2 {
     color: white;
+    text-align: center;
 }
 
 .ffd-day {
@@ -51,6 +52,8 @@
 
     .f-current {
         border-radius: 35px;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
 
     .forecast h1 {
