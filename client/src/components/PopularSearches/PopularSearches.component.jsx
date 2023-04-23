@@ -37,37 +37,27 @@ const PopularSearches = () => {
     }, [fetchCities]);
 
     return (
-        <>
-        {
-            topSearches.length === 0 ? 
-            (
-                ''
-            ) : 
-            (
-                <div className='popular-searches'>
-                    <h2>Top Searches</h2>
-                    {
-                        !fetched ? 
-                        (
-                            <Loader/>
-                        ) : 
-                        (
-                            topSearches.map((search, i) => {
-                                if(i < 5) {
-                                    return (
-                                        <p>{i + 1}. {toTitleCase(search.city)}</p>
-                                    );
-                                }
-                                else {
-                                    return<></>
-                                }
-                            })
-                        )
-                    }
-                </div>
-            )
-        }
-        </>
+        <div className='popular-searches'>
+            <h2>Top Searches</h2>
+            {
+                !fetched ? 
+                (
+                    <Loader/>
+                ) : 
+                (
+                    topSearches.map((search, i) => {
+                        if(i < 5) {
+                            return (
+                                <p>{i + 1}. {toTitleCase(search.city)}</p>
+                            );
+                        }
+                        else {
+                            return<></>
+                        }
+                    })
+                )
+            }
+        </div>
     );
 }
 
