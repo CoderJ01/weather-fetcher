@@ -33,12 +33,6 @@
     margin-top: 3vh;
 }
 
-.search-popular button:active {
-    background-image: linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255));
-    border-image: linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255));
-    border-width: 2px;
-}
-
 .search-input button,
 .search-popular button {
     padding: 5px;
