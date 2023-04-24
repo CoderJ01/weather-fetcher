@@ -15,6 +15,12 @@ import PopularSearches from '../../components/PopularSearches/PopularSearches.co
 // other imports
 import axios from 'axios';
 
+const selectedButton = {
+    backgroundImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
+    borderImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
+    borderWidth: '2px'
+}
+
 const Dashboard = () => {
     const [input, setInput] = useState('');
     const [selection, setSelection] = useState('');
@@ -108,10 +114,17 @@ const Dashboard = () => {
                 </div>
                 <div className='search-popular'>
                 {
-                    popularCites.map(city => {
-                        return (
-                            <button onClick={() => {setSelection(city)}}>{city}</button>
-                        );
+                    popularCites.map(popularCity => {
+                        if(city === popularCity) {
+                            return (
+                                <button onClick={() => {setSelection(popularCity)}} style={selectedButton}>{popularCity}</button>
+                            );
+                        }
+                        else {
+                            return (
+                                <button onClick={() => {setSelection(popularCity)}}>{popularCity}</button>
+                            );
+                        }
                     })
                 }
                 </div>
