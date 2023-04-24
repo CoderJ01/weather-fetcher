@@ -22,7 +22,7 @@
 }
 
 /* iPad Pro */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
     .popular-searches {
         border-radius: 25px;
         margin-left: 25%;

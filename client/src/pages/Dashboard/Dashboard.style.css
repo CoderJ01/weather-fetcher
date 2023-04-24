@@ -73,8 +73,7 @@
     }
 }
 
-/* iPad Pro */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1279px) {
     .weather {
         margin-top: 3vh;
     }
