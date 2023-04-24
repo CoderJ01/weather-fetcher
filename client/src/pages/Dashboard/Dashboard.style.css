@@ -33,6 +33,10 @@
     margin-top: 3vh;
 }
 
+.search-popular button:active {
+    opacity: 0.5;
+}
+
 .search-input button,
 .search-popular button {
     padding: 5px;
