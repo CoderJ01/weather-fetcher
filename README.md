@@ -1,7 +1,7 @@
 # Weather Fetcher
 
 ## Purpose
-This site is designed to fetch the weather. Per chosen city, it showcases the current weather and the weather for the next five days. It also keeps track of the top searhces.
+This site is designed to fetch the weather. Per chosen city, it showcases the current weather and the weather for the next five days. It also keeps track of the top searches.
 
 ## Tools Used
 * MERN stack
