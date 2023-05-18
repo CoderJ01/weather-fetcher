@@ -7,12 +7,13 @@ import './Forecast.style.css';
 // other imports
 import moment from 'moment';
 
-const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
+const Forecast = ({ weather = [], daily = []}) => {
+
     return (
         <div className='forecast'>
             <div className='f-current'>
             {
-                !fetched ? 
+                weather.length === 0 ? 
                 (
                     <>
                     <h1>City</h1>
@@ -26,13 +27,13 @@ const Forecast = ({ city, temp, wind, humidity, fetched, daily = []}) => {
                 ) : 
                 (
                     <>
-                    <h1>{city}</h1>
+                    <h1>{weather.name}</h1>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {((temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {((weather.main.temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {wind} mph</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {weather.wind.speed} mph</p>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {humidity}%</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {weather.main.humidity}%</p>
                     </>
                 )
             }
