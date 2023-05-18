@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.style.css';
 
 // utils
-import { popularCites } from './Dashboard.util';
+import { popularCites, checkPopularCity } from './Dashboard.util';
 import { baseURL } from '../../utils/urls';
 
 // components
@@ -31,12 +31,9 @@ const Dashboard = () => {
     const handleSearchSubmit = useCallback(() => {
         if(input !== '') {
 
-            for(let i = 0; i < popularCites.length; i++) {
-                if(input.toLowerCase() === popularCites[i].toLowerCase()) {
-                    alert(`Use button for ${popularCites[i]}`);
-                    return;
-                }
-            }
+            if(checkPopularCity(input)) {
+                return;
+            };
 
             const fetchCurrentWeather = async () => {
                 try {
