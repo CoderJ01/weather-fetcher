@@ -2,7 +2,7 @@ export const popularCites = ['Austin', 'Chicago', 'New York', 'Orlando', 'San Fr
 
 export const checkPopularCity = (input) => {
     for(let i = 0; i < popularCites.length; i++) {
-        if(input.toLowerCase() === popularCites[i].toLowerCase()) {
+        if(input.toLowerCase().trim() === popularCites[i].toLowerCase().trim()) {
             alert(`Use button for ${popularCites[i]}`);
             return true;
         }
