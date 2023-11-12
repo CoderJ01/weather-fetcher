@@ -14,6 +14,9 @@ This site is designed to fetch the weather. Per chosen city, it showcases the cu
 ## Website Link
 https://weather-fetcher-eb22.onrender.com/
 
+## Video Demonstration
+https://www.youtube.com/watch?v=1jm6JJYgF44
+
 If the top searhces do not appear right away, refresh the page a few times and wait about 30 - 45 seconds.
 
 ## Contribution
