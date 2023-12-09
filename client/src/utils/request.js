@@ -19,7 +19,7 @@ export function GetData(route, setFetched) {
         catch(error) {
             console.log(error);
         }
-    }, [route]);
+    }, [route, setFetched]);
 
     useEffect(() => {
         getInfo();
