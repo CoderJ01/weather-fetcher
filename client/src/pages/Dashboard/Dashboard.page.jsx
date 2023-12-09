@@ -22,11 +22,7 @@ const Dashboard = () => {
         processInput(input, setWeather, setCity, setDaily);
     }
 
-    const handlePopularSubmit = () => {
-        processSelection(selection, setWeather, setCity, setDaily, setSelection);
-    }
-
-    handlePopularSubmit();
+    processSelection(selection, setWeather, setCity, setDaily, setSelection);
 
     return (
         <>
