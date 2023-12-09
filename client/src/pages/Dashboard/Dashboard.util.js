@@ -1,5 +1,3 @@
-import { GetData } from "../../utils/request";
-
 export const popularCites = ['Austin', 'Chicago', 'New York', 'Orlando', 'San Francisco', 'Seattle', 'Denver', 'Atlanta'];
 
 export const checkPopularCity = (input) => {
@@ -10,10 +8,4 @@ export const checkPopularCity = (input) => {
         }
     }
     return false;
-}
-
-export const processSearch = (input) => {
-    if(input === '' || checkPopularCity(input)) {
-        return;
-    }
 }
