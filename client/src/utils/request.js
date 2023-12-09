@@ -7,13 +7,14 @@ import axios from 'axios';
 const baseURL_server = process.env.REACT_APP_DEPLOYED_BACKEND;
 
 // GET
-export function GetData(route) {
+export function GetData(route, setFetched) {
     const [data, setData] = useState([]);
 
     const getInfo = useCallback(async() => {
         try {
             const response = await axios.get(`${baseURL_server}/${route}`);
             setData(response);
+            setFetched(true);
         }
         catch(error) {
             console.log(error);
