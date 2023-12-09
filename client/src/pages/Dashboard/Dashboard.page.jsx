@@ -11,9 +11,6 @@ import { popularCites, processInput, processSelection, selectedButton } from './
 import Forecast from '../../components/Forecast/Forecast.component';
 import PopularSearches from '../../components/PopularSearches/PopularSearches.component';
 
-// other imports
-import axios from 'axios';
-
 const Dashboard = () => {
     const [input, setInput] = useState('');
     const [selection, setSelection] = useState('');
