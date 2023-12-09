@@ -9,6 +9,7 @@ import Loader from '../Loader/Loader.component';
 
 // util
 import { toTitleCase } from './PopularSearches.util';
+import { GetData } from '../../utils/request';
 
 // URL
 import { baseURL } from '../../utils/urls';
@@ -17,24 +18,25 @@ import { baseURL } from '../../utils/urls';
 import axios from 'axios';
 
 const PopularSearches = () => {
-    const [topSearches, setTopSearches] = useState([]);
     const [fetched, setFetched] = useState(false);
+    const data = GetData(`search-history`, setFetched);
+    console.log(data);
 
-    const fetchCities = useCallback(async () => {
-        try {
-            const response = await axios.get(`${baseURL}/search-history`);
-            console.log(response.data);
-            setTopSearches(response.data);
-            setFetched(true);
-        }
-        catch(error) {
-            console.log(error);
-        }
-    }, [setTopSearches]);
+    // const fetchCities = useCallback(async () => {
+    //     try {
+    //         const response = await axios.get(`${baseURL}/search-history`);
+    //         console.log(response.data);
+    //         setTopSearches(response.data);
+    //         setFetched(true);
+    //     }
+    //     catch(error) {
+    //         console.log(error);
+    //     }
+    // }, [setTopSearches]);
 
-    useEffect(() => {
-        fetchCities();
-    }, [fetchCities]);
+    // useEffect(() => {
+    //     fetchCities();
+    // }, [fetchCities]);
 
     return (
         <div className='popular-searches'>
@@ -45,7 +47,7 @@ const PopularSearches = () => {
                     <Loader/>
                 ) : 
                 (
-                    topSearches.map((search, i) => {
+                    data?.data?.map((search, i) => {
                         if(i < 5) {
                             return (
                                 <p>{i + 1}. {toTitleCase(search.city)}</p>
