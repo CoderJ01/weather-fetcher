@@ -7,13 +7,13 @@ import './Forecast.style.css';
 // other imports
 import moment from 'moment';
 
-const Forecast = ({ weather = [], daily = []}) => {
+const Forecast = ({ weather, daily }) => {
 
     return (
         <div className='forecast'>
             <div className='f-current'>
             {
-                weather.length === 0 ? 
+                weather?.length === 0 ? 
                 (
                     <>
                     <h1>City</h1>
@@ -29,11 +29,11 @@ const Forecast = ({ weather = [], daily = []}) => {
                     <>
                     <h1>{weather.name}</h1>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {((weather.main.temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {((weather?.main?.temp - 273.15) * (9/5) + 32).toFixed(2)}°F</p>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {weather.wind.speed} mph</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {weather?.wind?.speed} mph</p>
                     <br/>
-                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {weather.main.humidity}%</p>
+                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {weather?.main?.humidity}%</p>
                     </>
                 )
             }
@@ -61,9 +61,9 @@ const Forecast = ({ weather = [], daily = []}) => {
                             return (
                                 <div className='ffd-day'>
                                     <p><span style={{ fontWeight: 'bold' }}>Date:</span> {moment().add(i + 1,'day').format('L')}</p>
-                                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {daily[i + 1].temp.day}°F</p>
-                                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {daily[i + 1].wind_speed} mph</p>
-                                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {daily[i + 1].humidity}%</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Temp:</span> {daily[i + 1]?.temp?.day}°F</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Wind:</span> {daily[i + 1]?.wind_speed} mph</p>
+                                    <p><span style={{ fontWeight: 'bold' }}>Humidity:</span> {daily[i + 1]?.humidity}%</p>
                                 </div>
                             );
                         })

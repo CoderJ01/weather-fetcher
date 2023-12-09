@@ -28,7 +28,7 @@ const PopularSearches = () => {
                     data?.data?.map((search, i) => {
                         if(i < 5) {
                             return (
-                                <p>{i + 1}. {toTitleCase(search.city)}</p>
+                                <p>{i + 1}. {toTitleCase(search?.city)}</p>
                             );
                         }
                         else {
