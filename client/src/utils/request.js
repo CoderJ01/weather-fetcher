@@ -34,7 +34,7 @@ export function postInfo(route, input) {
        input: input
     })
     .then(response => {
-        console.log(response);
+        console.log(`Successful request! Status ${response.status}!`);
     })
     .catch(error => {
         console.log(error);
