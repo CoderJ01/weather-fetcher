@@ -34,7 +34,7 @@ export const processInput = async (input, setWeather, setCity, setDaily) => {
     postInfo(`search-history`);
 }
 
-export const processSelection = async (selection, setWeather, setCity, setDaily) => {
+export const processSelection = async (selection, setWeather, setCity, setDaily, setSelection) => {
     if(selection === '') return;
 
     try {
@@ -43,6 +43,7 @@ export const processSelection = async (selection, setWeather, setCity, setDaily)
         setWeather(response.data);
         setCity(response.data.name);
         setDaily(response_5day.data.daily);
+        setSelection('');
     }
     catch(error) {
         console.log(error);
