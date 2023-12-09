@@ -1,5 +1,5 @@
 // React 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 
 // CSS
 import './Dashboard.style.css';
@@ -22,15 +22,11 @@ const Dashboard = () => {
         processInput(input, setWeather, setCity, setDaily);
     }
 
-    const handlePopularSubmit = useCallback(() => {
-        processSelection(selection, setWeather, setCity, setDaily);
-    }, [selection])
+    const handlePopularSubmit = () => {
+        processSelection(selection, setWeather, setCity, setDaily, setSelection);
+    }
 
-    useEffect(() => {
-        if(selection !== '') {
-            handlePopularSubmit();
-        }
-    }, [selection, handlePopularSubmit]);
+    handlePopularSubmit();
 
     return (
         <>
