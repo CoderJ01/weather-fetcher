@@ -34,6 +34,21 @@ export const processInput = async (input, setWeather, setCity, setDaily) => {
     postInfo(`search-history`);
 }
 
+export const processSelection = async (selection, setWeather, setCity, setDaily) => {
+    if(selection === '') return;
+
+    try {
+        const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${selection}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
+        const response_5day = await axios.request(`https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&&units=imperial&lon=${response.data.coord.lon}&exclude=hourly&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
+        setWeather(response.data);
+        setCity(response.data.name);
+        setDaily(response_5day.data.daily);
+    }
+    catch(error) {
+        console.log(error);
+    }   
+}
+
 export const selectedButton = {
     backgroundImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
     borderImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',

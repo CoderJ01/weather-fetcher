@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.style.css';
 
 // utils
-import { popularCites, processInput, selectedButton } from './Dashboard.util';
+import { popularCites, processInput, processSelection, selectedButton } from './Dashboard.util';
 
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
@@ -26,21 +26,7 @@ const Dashboard = () => {
     }
 
     const handlePopularSubmit = useCallback(() => {
-        if(selection !== '') {
-            const fetchCurrentWeather = async () => {
-                try {
-                    const response = await axios.request(`https://api.openweathermap.org/data/2.5/weather?q=${selection}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    const response_5day = await axios.request(`https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&&units=imperial&lon=${response.data.coord.lon}&exclude=hourly&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`);
-                    setWeather(response.data);
-                    setCity(response.data.name);
-                    setDaily(response_5day.data.daily);
-                }
-                catch(error) {
-                    console.log(error);
-                }
-            }
-            fetchCurrentWeather();
-        }
+        processSelection(selection, setWeather, setCity, setDaily);
     }, [selection])
 
     useEffect(() => {
