@@ -1,5 +1,5 @@
 // React
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 
 // CSS
 import './PopularSearches.style.css';
@@ -11,32 +11,10 @@ import Loader from '../Loader/Loader.component';
 import { toTitleCase } from './PopularSearches.util';
 import { GetData } from '../../utils/request';
 
-// URL
-import { baseURL } from '../../utils/urls';
-
-// other imports
-import axios from 'axios';
-
 const PopularSearches = () => {
     const [fetched, setFetched] = useState(false);
+
     const data = GetData(`search-history`, setFetched);
-    console.log(data);
-
-    // const fetchCities = useCallback(async () => {
-    //     try {
-    //         const response = await axios.get(`${baseURL}/search-history`);
-    //         console.log(response.data);
-    //         setTopSearches(response.data);
-    //         setFetched(true);
-    //     }
-    //     catch(error) {
-    //         console.log(error);
-    //     }
-    // }, [setTopSearches]);
-
-    // useEffect(() => {
-    //     fetchCities();
-    // }, [fetchCities]);
 
     return (
         <div className='popular-searches'>
