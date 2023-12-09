@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.style.css';
 
 // utils
-import { popularCites, processSubmission } from './Dashboard.util';
+import { popularCites, processSubmission, selectedButton } from './Dashboard.util';
 
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
@@ -13,12 +13,6 @@ import PopularSearches from '../../components/PopularSearches/PopularSearches.co
 
 // other imports
 import axios from 'axios';
-
-const selectedButton = {
-    backgroundImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
-    borderImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
-    borderWidth: '2px'
-}
 
 const Dashboard = () => {
     const [input, setInput] = useState('');

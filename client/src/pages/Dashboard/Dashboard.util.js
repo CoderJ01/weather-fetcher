@@ -33,3 +33,9 @@ export const processSubmission = async (input, setWeather, setCity, setDaily) =>
 
     postInfo(`search-history`);
 }
+
+export const selectedButton = {
+    backgroundImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
+    borderImage: 'linear-gradient(to left, rgb(63, 162, 219), rgb(182, 135, 255))',
+    borderWidth: '2px'
+}
