@@ -16,7 +16,7 @@ export const checkPopularCity = (input) => {
     return false;
 }
 
-export const processSubmission = async (input, setWeather, setCity, setDaily) => {
+export const processInput = async (input, setWeather, setCity, setDaily) => {
     if(input === '' || checkPopularCity(input)) return;
     
     try {

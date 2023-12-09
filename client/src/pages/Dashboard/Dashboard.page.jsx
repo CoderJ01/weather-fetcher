@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Dashboard.style.css';
 
 // utils
-import { popularCites, processSubmission, selectedButton } from './Dashboard.util';
+import { popularCites, processInput, selectedButton } from './Dashboard.util';
 
 // components
 import Forecast from '../../components/Forecast/Forecast.component';
@@ -22,7 +22,7 @@ const Dashboard = () => {
     const [daily, setDaily] = useState([]);
 
     const handleSearchSubmit = () => {
-        processSubmission(input, setWeather, setCity, setDaily);
+        processInput(input, setWeather, setCity, setDaily);
     }
 
     const handlePopularSubmit = useCallback(() => {
